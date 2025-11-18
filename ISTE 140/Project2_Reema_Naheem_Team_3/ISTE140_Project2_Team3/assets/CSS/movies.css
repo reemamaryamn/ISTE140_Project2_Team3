@@ -1,0 +1,54 @@
+body{
+    background-image:url(../media/galaxy_gradient.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-size: cover;
+    margin:0px;
+    font-family: Orbitron;
+}
+
+nav{
+    padding: 20px;
+    width:100%;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    padding: 20px;
+    display: inline-block;
+    padding: 0px 20px;
+    transition: padding 0.3s ease;
+}
+nav a:hover{
+    padding: 0px 35px;
+    color: #a683c7;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 10px;
+    padding: 10px;
+    height: 100vh;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+.mixtape{
+    text-align: center;
+}
+.mixtape img{
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in;
+}
+.content img{
+    float: left;
+    margin-right: 20px;
+}
+
+
+.scenes{
+    clear:left;
+    display:inline-flex;
+}
