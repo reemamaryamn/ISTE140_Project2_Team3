@@ -26,6 +26,29 @@ nav a:hover{
     color: #a683c7;
 }
 
-content{
-    background-color:aliceblue;
+.container{
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 10px;
+    padding: 10px;
+    height: 100vh;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+.mixtape{
+    text-align: center;
+}
+.mixtape img{
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in;
+}
+.content img{
+    float: left;
+    margin-right: 20px;
+}
+
+
+.scenes{
+    clear:left;
+    display:inline-flex;
 }
