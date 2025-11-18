@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/CSS/movies.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <title>Volume 1</title>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a> 
+            <a href="movie1.html">Vol 1</a> 
+            <a href="movie2.html">Vol 2</a>
+            <a href="movie3.html">Vol 3</a>
+            <a href="characters.html">Characters</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="about_us.html">About Us</a>
+        </nav>
+        
+        <div class="container">
+            <div class="mixtape">
+                <img id=tape src="assets/media/awesome_mix1.png" alt="Awesome Mix 1" width="230" height="150">
+                <audio id="tapeAudio" loop>
+                    <source src="assets/media/ComeAndGetYourLove.mp3" type="audio/mpeg">
+                    <source src="assets/media/ComeAndGetYourLove.ogg" type="audio/ogg">
+                </audio>
+            </div>
+            <div class="content">
+                <img src="assets/media/v1poster.jpg" alt="Movie Poster" width="150" height="200">
+                <h2>Volume 1</h2>
+                <p>An action-packed, epic space adventure, Marvel's "Guardians of the Galaxy," expands the Marvel Cinematic Universe into the cosmos, where brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by Ronan, a powerful villain with ambitions that threaten the entire universe. To evade the ever-persistent Ronan, Quill is forced into an uneasy truce with a quartet of disparate misfits--Rocket, a gun-toting raccoon; Groot, a tree-like humanoid; the deadly and enigmatic Gamora; and the revenge-driven Drax the Destroyer. But when Quill discovers the true power of the orb and the menace it poses to the cosmos, he must do his best to rally his ragtag rivals for a last, desperate stand--with the galaxy's fate in the balance.</p>
+                <p>The team, once unified, travels to the planet Xandar to stop Ronan. They confront Ronan and his forces and manage to defeat him, preventing him from destroying the universe with the Infinity Stone.</p>
+
+                <div class="scenes">
+                    <div>
+                        <h2>Quotes</h2>
+                        <img src="assets/media/vol1_quote1.gif" alt="Quote from the movie" width="350" height="200">
+                        <img src="assets/media/v1quote2.gif" alt="Quote from the movie" width="350" height="200">
+                    </div>
+                    <div>
+                        <h2>Movie Clip</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rLM-bmdTuy0?si=96NltU5fDQanbJSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+        
+            </div>
+
+        </div>  
+        <script>
+            const img = document.getElementById("tape");
+            const audio = document.getElementById("tapeAudio");
+
+            img.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                    img.style.opacity = "1";
+                } else {
+                    audio.pause();
+                    audio.currentTime = 0;
+                    img.style.opacity = "0.5";
+                }
+            });
+        </script>
+    </body>
+</html>
