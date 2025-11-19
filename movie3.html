@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/CSS/movies.css">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-        <title>Volume 1</title>
+        <title>Volume 2</title>
     </head>
     <body>
         <nav>
@@ -14,25 +14,58 @@
             <a href="movie2.html">Vol 2</a>
             <a href="movie3.html">Vol 3</a>
             <a href="quiz.html">Quiz</a>
+            <a href="characters.html">Characters</a>
             <a href="about_us.html">About Us</a>
         </nav>
         <div class="container">
             <div class="mixtape">
-                <img id=tape src="assets/media/awesome_mix1.png" alt="Awesome Mix 1" width="230" height="150">
+                <img id=tape src="assets/media/awesome_mix3.png" alt="Awesome Mix 1" width="230" height="150">
                 <audio id="tapeAudio" loop>
-                    <source src="assets/media/ComeAndGetYourLove.mp3" type="audio/mpeg">
-                    <source src="assets/media/ComeAndGetYourLove.ogg" type="audio/ogg">
+                    <source src="assets/media/CrazyOnYou.mp3" type="audio/mpeg">
+                    <source src="assets/media/CrazyOnYou.mp3" type="audio/ogg">
                 </audio>
             </div>
-             <div class="content">
+            <div class="content">
                 <img src="assets/media/v3poster.jpg" alt="Movie Poster" width="150" height="200">
                 <h1>Guardians of Galaxy Vol.3</h1>
                 <p>Guardians of the Galaxy Vol. 3 is a 2023 superhero film, based on the Marvel Comics superhero team of the same name. The film is a sequel to Guardians of the Galaxy, Guardians of the Galaxy Vol. 2, Avengers: Endgame, and The Guardians of the Galaxy Holiday Special. It is the thirty-second film in the Marvel Cinematic Universe and the second installment of Phase Five. The film was released on May 5, 2023.</p>
-                <p>The film is written and directed by James Gunn. </p>
-                <div>imdb rating: 7.9/10 </div>
-                <br>
-                <p>In Marvel Studios' Guardians of the Galaxy Vol. 3 our beloved band of misfits are settling into life on Knowhere. But it isn't long before their lives are upended by the echoes of Rocket's turbulent past. Peter Quill, still reeling from the loss of Gamora, must rally his team around him on a dangerous mission to save Rocket's life—a mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.</p>
+                <p>In thus movie our beloved band of misfits are settling into life on Knowhere. But it isn't long before their lives are upended by the echoes of Rocket's turbulent past. Peter Quill, still reeling from the loss of Gamora, must rally his team around him on a dangerous mission to save Rocket's life—a mission that, if not completed successfully, could quite possibly lead to the end of the Guardians as we know them.</p>
+                <div class="scenes">
+                    <div>
+                        <h2>Quotes</h2>
+                        <img src="assets/media/vol3quote1.gif" alt="Quote from the movie" width="350" height="200">
+                        <img src="assets/media/vol3quote2.gif" alt="Quote from the movie" width="350" height="270">
+                    </div>
+                    <div>
+                        <h2>Movie Clip</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/u3V5KDHRQvk?si=vfFfASQFkTcvnyy-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
+        <footer>
+            <p>&copy Guide to the Gaurdains of the Galaxy</p>
+            <p>
+                <a href="mailto:aj9637@rit.edu">Amal Junaid</a> |
+                <a href="mailto:gb2109@rit.edu">Grishma Bhandari</a> |
+                <a href="mailto:rmn1307@rit.edu">Reema Naheem</a> |
+                <a href="mailto:ms4830@rit.edu">Madheeha Sameeen</a>
+            </p>
+        </footer> 
+        <script>
+            const img = document.getElementById("tape");
+            const audio = document.getElementById("tapeAudio");
+            audio.currentTime = 40;
+            img.addEventListener("click", () => {
+                if (audio.paused) {
+                    audio.play();
+                    img.style.opacity = "1";
+                } else {
+                    audio.pause();
+                    audio.currentTime = 40;
+                    img.style.opacity = "0.5";
+                }
+            });
+        </script>
     </body>
 </html>
