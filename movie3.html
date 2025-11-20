@@ -20,7 +20,7 @@
         <div class="container">
             <div class="mixtape">
                 <img id=tape src="assets/media/awesome_mix3.png" alt="Awesome Mix 1" width="230" height="150">
-                <audio id="tapeAudio" loop>
+                <audio id="tapeAudio" controls loop>
                     <source src="assets/media/CrazyOnYou.mp3" type="audio/mpeg">
                     <source src="assets/media/CrazyOnYou.mp3" type="audio/ogg">
                 </audio>
@@ -60,10 +60,12 @@
                 if (audio.paused) {
                     audio.play();
                     img.style.opacity = "1";
+                    audio.style.opacity = "1";
                 } else {
                     audio.pause();
                     audio.currentTime = 40;
                     img.style.opacity = "0.5";
+                    audio.style.opacity = "0.5";
                 }
             });
         </script>
