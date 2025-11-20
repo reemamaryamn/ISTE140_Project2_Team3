@@ -28,7 +28,7 @@ body {
        width: 300px;
     height: 200px;
     background: radial-gradient(200% 100% at 50% 100%, #1a0f2b 0%, #0a0510 100%),
-                url('bg.png') no-repeat center center;
+                url('assets/bg.png') no-repeat center center;
     background-size: cover; 
     background-attachment: fixed; 
     animation: moveStars 60s linear infinite;
