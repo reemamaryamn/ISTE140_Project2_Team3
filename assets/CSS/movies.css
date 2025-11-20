@@ -113,6 +113,117 @@ audio {
     font-weight: 500;
 }
 
+/*about us css*/
+
+
+#about-us-h2 {
+    color: white;
+    font-size: 40px;
+}
+
+
+.about-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* more spacing between sections */
+    gap: 20px; /* space between image and text box */
+}
+
+.about-section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white; /* makes the image stand out */
+}
+
+.description-box {
+    background-color: rgba(255, 255, 255, 0.8); /* light background so text is readable */
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 600px;
+    flex: 1;
+    backdrop-filter: blur(3px); /* optional aesthetic blur */
+    font-size: 18px;
+    color: black;
+}
+
+/* FEEDBACK FORM STYLES */
+.feedback-container {
+    border-radius: 10px;
+    background-color: rgba(128, 0, 128, 0.85);
+    padding: 25px;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    color: white;
+    min-height: 700px;
+}
+
+.feedback-container h2 {
+    text-align: center;
+    color: white;
+}
+
+.feedback-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    min-height: 80px;
+}
+
+.feedback-label {
+    width: 25%;
+    font-weight: bold;
+    padding-top: 12px;
+}
+
+.feedback-input {
+    width: 75%;
+}
+
+.feedback-input input,
+.feedback-input select,
+.feedback-input textarea {
+    height: 50px;
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #d6b3ff;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+
+.feedback-submit {
+    background-color: #b066ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    display: flex;
+}
+
+.feedback-submit:hover {
+    background-color: #8f3fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .feedback-row {
+        flex-direction: column;
+    }
+
+    .feedback-label,
+    .feedback-input,
+    .feedback-submit {
+        width: 100%;
+    }
+}
+
+
 
 footer{
     text-align: center;

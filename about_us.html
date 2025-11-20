@@ -1,236 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/movies.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            padding: 30px; /* space from the page border */
-        }
-
-        h2 {
-        color: white; 
-        font-size: 40px;
-         }
-
-
-        .about-section {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px; /* more spacing between sections */
-            gap: 20px; /* space between image and text box */
-        }
-
-        .about-section img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white; /* makes the image stand out */
-        }
-
-        .description-box {
-            background-color: rgba(255, 255, 255, 0.8); /* light background so text is readable */
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 600px;
-            flex: 1;
-            backdrop-filter: blur(3px); /* optional aesthetic blur */
-            font-size: 18px;
-            color: black;
-
-
-        }
-
-        /* FEEDBACK FORM STYLES */
-.feedback-container {
-  border-radius: 10px;
-  background-color: rgba(128, 0, 128, 0.85);
-  padding: 25px;
-  max-width: 700px;
-  margin: 40px auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  color: white;
-  min-height: 700px;
-}
-
-.feedback-container h2 {
-  text-align: center;
-  color: white;
-}
-
-.feedback-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  min-height: 80px;
-}
-
-.feedback-label {
-  width: 25%;
-  font-weight: bold;
-  padding-top: 12px;
-}
-
-.feedback-input {
-  width: 75%;
-}
-
-.feedback-input input,
-.feedback-input select,
-.feedback-input textarea {
-  height: 50px;
-  width: 80%;
-  padding: 12px;
-  border: 2px solid #d6b3ff;
-  border-radius: 5px;
-  background: white;
-  color: black;
-}
-
-.feedback-submit {
-  background-color: #b066ff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  float: right;
-  font-size: 16px;
-  display: flex;
-  
-  
-}
-
-.feedback-submit:hover {
-  background-color: #8f3fff;
-}
-
-/* Responsive */
-@media screen and (max-width: 600px) {
-  .feedback-row {
-    flex-direction: column;
-  }
-  .feedback-label, .feedback-input, .feedback-submit {
-    width: 100%;
-  }
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/CSS/movies.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-    <a href="index.html">Home</a> 
-    <a href="movie1.html">Vol 1</a> 
-    <a href="movie2.html">Vol 2</a>
-    <a href="movie3.html">Vol 3</a>
-    <a href="characters.html">Characters</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="about_us.html">About Us</a>
-</nav>
+  <nav>
+      <input type="checkbox" id="menu-toggle">
 
-<h2>About Us</h2>
+        <label for="menu-toggle" class="menu-icon">
+          <div class="hamburger">&#9776;</div>
+        </label>
 
-<div style="display: flex; gap: 40px; margin-bottom: 40px;">
-
-<!-- Image 1 -->
-<div class="about-section">
-    <img src="assets\media\aboutusmads.jpeg" alt="aboutusmads">
-    <div class="description-box">
-        <p>Name : Madheeha sameen</p>
-        <p>Contact: 0562440299</p>
-        <p>Mail: ms4830@rit.edu </p>
-    </div>
-</div>
-
-<!-- Image 2 -->
-<div class="about-section">
-    <img src="assets\media\grishmaaboutus.jpeg" alt="grishmaaboutus">
-    <div class="description-box">
-        <p>Name : Grishma Bhandari</p>
-         <p>Contact: 0561320298</p>
-        <p>Mail: gb2109@rit.edu </p>
-    </div>
-</div>
-
-</div>
-
-<div style="display: flex; gap: 60px; margin-bottom: 60px;">
-
-<!-- Image 3 -->
-<div class="about-section">
-    <img src="assets\media\amalaboutus.png" alt="amalaboutus">
-    <div class="description-box">
-        <p>Name : Amal junaid</p>
-        <p>Contact: 0508059536 </p>
-        <p>Mail: aj9637@g.rit.edu</p>
-    </div>
-</div>
-
-<!-- Image 4 -->
-<div class="about-section">
-    <img src="assets\media\reemaaboutus.jpg" alt="reemaaboutus">
-    <div class="description-box">
-        
-        <p>Name : reema mariyam</p>
-        <p>Contact: 0569043817</p>
-        <p>Mail: rmn1307@rit.edu </p>
-    </div>
-</div>
-
-</div>
-
-
-<div class="feedback-container">
-  <h2>Feedback Form</h2>
-
-  <form action="#">
-
-    <div class="feedback-row">
-      <div class="feedback-label">First Name</div>
-      <div class="feedback-input">
-        <input type="text" placeholder="Your name..">
+        <div class="nav-links">
+        <a href="index.html">Home</a> 
+        <a href="movie1.html">Vol 1</a> 
+        <a href="movie2.html">Vol 2</a>
+        <a href="movie3.html">Vol 3</a>
+        <a href="characters.html">Characters</a>
+        <a href="about_us.html">About Us</a>
       </div>
-    </div>
+  </nav>
 
-    <div class="feedback-row">
-      <div class="feedback-label">Last Name</div>
-      <div class="feedback-input">
-        <input type="text" placeholder="Your last name..">
+  <h2 id="about-us-h2">About Us</h2>
+
+  <div style="display: flex; gap: 40px; margin-bottom: 40px;">
+
+  <!-- Image 1 -->
+  <div class="about-section">
+      <img src="assets\media\aboutusmads.jpeg" alt="aboutusmads">
+      <div class="description-box">
+          <p>Name : Madheeha sameen</p>
+          <p>Contact: 0562440299</p>
+          <p>Mail: ms4830@rit.edu </p>
       </div>
-    </div>
+  </div>
 
-    <div class="feedback-row">
-      <div class="feedback-label">Country</div>
-      <div class="feedback-input">
-        <select>
-          <option>UAE</option>
-          <option>Canada</option>
-          <option>USA</option>
-          <option>Oman</option>
-        </select>
+  <!-- Image 2 -->
+  <div class="about-section">
+      <img src="assets\media\grishmaaboutus.jpeg" alt="grishmaaboutus">
+      <div class="description-box">
+          <p>Name : Grishma Bhandari</p>
+          <p>Contact: 0561320298</p>
+          <p>Mail: gb2109@rit.edu </p>
       </div>
-    </div>
+  </div>
 
-    <div class="feedback-row">
-      <div class="feedback-label">Feedback</div>
-      <div class="feedback-input">
-        <textarea style="height:200px" placeholder="Write something.."></textarea>
+  </div>
+
+  <div style="display: flex; gap: 60px; margin-bottom: 60px;">
+
+  <!-- Image 3 -->
+  <div class="about-section">
+      <img src="assets\media\amalaboutus.jpg" alt="amalaboutus">
+      <div class="description-box">
+          <p>Name : Amal junaid</p>
+          <p>Contact: 0508059536 </p>
+          <p>Mail: aj9637@g.rit.edu</p>
       </div>
-    </div>
+  </div>
 
-    
-  <button class="feedback-submit">Submit</button>
+  <!-- Image 4 -->
+  <div class="about-section">
+      <img src="assets\media\reemaaboutus.jpg" alt="reemaaboutus">
+      <div class="description-box">
+          
+          <p>Name : reema mariyam</p>
+          <p>Contact: 0569043817</p>
+          <p>Mail: rmn1307@rit.edu </p>
+      </div>
+  </div>
+
+  </div>
+
+
+  <div class="feedback-container">
+    <h2>Feedback Form</h2>
+
+    <form action="#">
+
+      <div class="feedback-row">
+        <div class="feedback-label">First Name</div>
+        <div class="feedback-input">
+          <input type="text" placeholder="Your name..">
+        </div>
+      </div>
+
+      <div class="feedback-row">
+        <div class="feedback-label">Last Name</div>
+        <div class="feedback-input">
+          <input type="text" placeholder="Your last name..">
+        </div>
+      </div>
+
+      <div class="feedback-row">
+        <div class="feedback-label">Country</div>
+        <div class="feedback-input">
+          <select>
+            <option>UAE</option>
+            <option>Canada</option>
+            <option>USA</option>
+            <option>Oman</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="feedback-row">
+        <div class="feedback-label">Feedback</div>
+        <div class="feedback-input">
+          <textarea style="height:200px" placeholder="Write something.."></textarea>
+        </div>
+      </div>
+
+      
+    <button class="feedback-submit">Submit</button>
 
 
 
-  </form>
-</div>
+    </form>
+  </div>
+  <footer>
+            <p>&copy Guide to the Gaurdains of the Galaxy</p>
+    <p>
+        <a href="mailto:aj9637@rit.edu">Amal Junaid</a> |
+        <a href="mailto:gb2109@rit.edu">Grishma Bhandari</a> |
+        <a href="mailto:rmn1307@rit.edu">Reema Naheem</a> |
+        <a href="mailto:ms4830@rit.edu">Madheeha Sameeen</a>
+    </p>
+  </footer>
 
 
 

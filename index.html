@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide to the Guardians of the Galaxy</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="assets/CSS/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,20 +12,34 @@
     <div class="background-starfield"></div>
 
     <header class="main-header">
+
         <nav class="navbar">
+            
+            <!-- HAMBURGER CHECKBOX -->
+            <input type="checkbox" id="menu-toggle">
+
+            <!-- LOGO -->
             <div class="logo">
-                <img src="assets/logo.jpeg" alt="Guardians HQ Logo">
+                <img src="assets/media/logo.jpeg" alt="Guardians HQ Logo">
                 <span>GUARDIANS HQ</span>
             </div>
+
+            <!-- HAMBURGER BUTTON -->
+            <label for="menu-toggle" class="menu-icon">
+                <div class="hamburger">&#9776;</div>
+            </label>
+
+            <!-- NAVIGATION LINKS -->
             <ul class="nav-links">
-                <li><a href="#" class="nav-link home-link">HOME</a></li>
-                <li><a href="#" class="nav-link vol1-link">VOL. 1</a></li>
-                <li><a href="#" class="nav-link vol2-link">VOL. 2</a></li>
-                <li><a href="#" class="nav-link vol3-link">VOL. 3</a></li>
-                <li><a href="#" class="nav-link about-link">ABOUT</a></li>
-                <li><a href="#" class="nav-link quiz-link">QUIZ</a></li>
+                <li><a href="index.html" class="nav-link home-link">HOME</a></li>
+                <li><a href="movie1.html" class="nav-link vol1-link">VOL. 1</a></li>
+                <li><a href="movie2.html" class="nav-link vol2-link">VOL. 2</a></li>
+                <li><a href="movie3.html" class="nav-link vol3-link">VOL. 3</a></li>
+                <li><a href="about_us.html" class="nav-link about-link">ABOUT</a></li>
             </ul>
-            </nav>
+
+        </nav>
+
     </header>
 
     <main>
@@ -69,13 +83,9 @@
         <div class="footer-links">
             <a href="#">About Us</a>
         </div>
-        <div class="social-icons">
-            <a href="#"><alt="Instagram"></a>
-        </div>
-        <p class="disclaimer">
-            Guardians HQ
-        </p>
+        <p class="disclaimer">Guardians HQ</p>
         <p class="groot-tag">I am Groot.</p>
     </footer>
+
 </body>
 </html>
