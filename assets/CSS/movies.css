@@ -8,22 +8,35 @@ body{
     font-family: Orbitron, Arial, Helvetica, sans-serif;
 }
 
-nav{
+nav {
     padding: 20px;
-    width:100%;
-    text-align: center;
+    width: 100%;
+    /* Use flexbox for desktop to align everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Important for absolute positioning the mobile menu later */
 }
-nav a{
+
+.nav-links {
+    display: flex; /* Display links side-by-side on desktop */
+}
+
+.nav-links a {
     text-decoration: none;
-    color:white;
-    padding: 20px;
-    display: inline-block;
+    color: white;
     padding: 0px 20px;
     transition: padding 0.3s ease;
 }
-nav a:hover{
+
+.nav-links a:hover {
     padding: 0px 35px;
     color: #a683c7;
+}
+
+/* Hide the toggle elements on desktop */
+#menu-toggle, .menu-icon {
+    display: none;
 }
 
 .container{
@@ -72,4 +85,86 @@ footer{
 }
 footer a{
     color: white;
+}
+
+/* TABLET (and smaller) STYLES */
+@media (max-width: 1024px) {
+    /* Reduce padding and margins on the main container */
+    .container {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    /* Adjust the nav link padding for tighter spacing on tablets */
+    .nav-links a {
+        padding: 0px 10px;
+    }
+
+    .nav-links a:hover {
+        padding: 0px 20px; /* Keep a smaller hover effect */
+    }
+
+    /* Example: Make the movie content layout more compact */
+    .content {
+        flex-direction: column;
+    }
+    iframe{
+        width:300px;
+        height:150px;
+    }
+    .scenes img{
+        margin-right: 20px;
+    }
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+    
+    /* 1. Show the hamburger icon */
+    .menu-icon {
+        display: block;
+    
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+        z-index: 10; /* Ensure icon is above the menu */
+    }
+
+    nav {
+        /* Align icon/logo to the sides on mobile */
+        justify-content: space-between; 
+        padding: 10px 20px;
+    }
+
+    /* 2. Hide the main link list by default */
+    .nav-links {
+        display: none;
+        
+        /* Menu appearance when open */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Position below the top bar */
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Dark background for the mobile menu */
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 3. Make links take full width in the mobile menu */
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #555; /* Separator line for links */
+    }
+    
+    /* 4. THE TOGGLE LOGIC: Show menu when the hidden checkbox is checked */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex; 
+    }
+    .scenes{
+        flex-direction: column;
+    }
 }
