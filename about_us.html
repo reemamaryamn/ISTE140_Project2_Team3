@@ -11,6 +11,12 @@
             padding: 30px; /* space from the page border */
         }
 
+         h2 {
+        color: white; 
+        font-size: 40px;
+         }
+
+
         .about-section {
             display: flex;
             align-items: center;
@@ -30,11 +36,89 @@
             background-color: rgba(255, 255, 255, 0.8); /* light background so text is readable */
             padding: 15px;
             border-radius: 10px;
-            max-width: 500px;
+            max-width: 600px;
+            flex: 1;
             backdrop-filter: blur(3px); /* optional aesthetic blur */
             font-size: 18px;
             color: black;
+
+
         }
+
+        /* FEEDBACK FORM STYLES */
+.feedback-container {
+  border-radius: 10px;
+  background-color: rgba(128, 0, 128, 0.85);
+  padding: 25px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  color: white;
+  min-height: 700px;
+}
+
+.feedback-container h2 {
+  text-align: center;
+  color: white;
+}
+
+.feedback-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  min-height: 80px;
+}
+
+.feedback-label {
+  width: 25%;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+.feedback-input {
+  width: 75%;
+}
+
+.feedback-input input,
+.feedback-input select,
+.feedback-input textarea {
+  height: 50px;
+  width: 80%;
+  padding: 12px;
+  border: 2px solid #d6b3ff;
+  border-radius: 5px;
+  background: white;
+  color: black;
+}
+
+.feedback-submit {
+  background-color: #b066ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  display: flex;
+  
+  
+}
+
+.feedback-submit:hover {
+  background-color: #8f3fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .feedback-row {
+    flex-direction: column;
+  }
+  .feedback-label, .feedback-input, .feedback-submit {
+    width: 100%;
+  }
+}
+
     </style>
 </head>
 
@@ -50,13 +134,17 @@
     <a href="about_us.html">About Us</a>
 </nav>
 
-<h1>About Us</h1>
+<h2>About Us</h2>
+
+<div style="display: flex; gap: 40px; margin-bottom: 40px;">
 
 <!-- Image 1 -->
 <div class="about-section">
     <img src="C:\Users\madhe\Downloads\comm 142\ISTE140_Project2_Team3-main\ISTE140_Project2_Team3-main\assets\media\aboutusmads.jpeg" alt="aboutusmads">
     <div class="description-box">
-        <p>This is the description for the first image. You can write anything you want here.</p>
+        <p>Name : Madheeha sameen</p>
+        <p>Contact: 0562440299</p>
+        <p>Mail: ms4830@rit.edu </p>
     </div>
 </div>
 
@@ -64,28 +152,89 @@
 <div class="about-section">
     <img src="C:\Users\madhe\Downloads\comm 142\ISTE140_Project2_Team3-main\ISTE140_Project2_Team3-main\assets\media\grishmaaboutus.jpeg" alt="grishmaaboutus">
     <div class="description-box">
-        <p>This is another description for the second image.</p>
+        <p>Name : Grishma Bhandari</p>
+         <p>Contact: 0561320298</p>
+        <p>Mail: gb2109@rit.edu </p>
     </div>
 </div>
 
+</div>
+
+<div style="display: flex; gap: 60px; margin-bottom: 60px;">
+
 <!-- Image 3 -->
 <div class="about-section">
-    <img src="C:\path\to\image3.jpeg" alt="img3">
+    <img src="C:\Users\madhe\Downloads\comm 142\ISTE140_Project2_Team3-main\ISTE140_Project2_Team3-main\assets\media\amalaboutus.png" alt="amalaboutus">
     <div class="description-box">
-        <p>Description for the third image.</p>
+        <p>Name : Amal junaid</p>
+        <p>Contact: 0508059536 </p>
+        <p>Mail: aj9637@g.rit.edu</p>
     </div>
 </div>
 
 <!-- Image 4 -->
 <div class="about-section">
-    <img src="C:\path\to\image4.jpeg" alt="img4">
+    <img src="C:\Users\madhe\Downloads\comm 142\ISTE140_Project2_Team3-main\ISTE140_Project2_Team3-main\assets\media\reemaaboutus.jpg" alt="reemaaboutus">
     <div class="description-box">
-        <p>Description for the fourth image.</p>
+        
+        <p>Name : reema mariyam</p>
+        <p>Contact: 0569043817</p>
+        <p>Mail: rmn1307@rit.edu </p>
     </div>
 </div>
 
+</div>
+
+
+<div class="feedback-container">
+  <h2>Feedback Form</h2>
+
+  <form action="#">
+
+    <div class="feedback-row">
+      <div class="feedback-label">First Name</div>
+      <div class="feedback-input">
+        <input type="text" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="feedback-row">
+      <div class="feedback-label">Last Name</div>
+      <div class="feedback-input">
+        <input type="text" placeholder="Your last name..">
+      </div>
+    </div>
+
+    <div class="feedback-row">
+      <div class="feedback-label">Country</div>
+      <div class="feedback-input">
+        <select>
+          <option>UAE</option>
+          <option>Canada</option>
+          <option>USA</option>
+          <option>Oman</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="feedback-row">
+      <div class="feedback-label">Feedback</div>
+      <div class="feedback-input">
+        <textarea style="height:200px" placeholder="Write something.."></textarea>
+      </div>
+    </div>
+
+    
+  <button class="feedback-submit">Submit</button>
+
+
+
+  </form>
+</div>
+
+
+
+
 </body>
 </html>
-
-
 
