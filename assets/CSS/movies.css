@@ -8,14 +8,13 @@ body{
     font-family: Orbitron, Arial, Helvetica, sans-serif;
 }
 
+/* Navigation Bar for movies pages, about us page and characters page */
 nav {
     padding: 20px;
     width: 100%;
-    /* Use flexbox for desktop to align everything */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Important for absolute positioning the mobile menu later */
 }
 
 .nav-links {
@@ -26,19 +25,20 @@ nav {
     text-decoration: none;
     color: white;
     padding: 0px 20px;
-    transition: padding 0.3s ease;
+    transition: padding 0.3s ease; /* To tranisition into the effect of a navbar item "pushing" when hovered over */
 }
 
 .nav-links a:hover {
     padding: 0px 35px;
-    color: #a683c7;
+    color: #a683c7; /* The extra padding gives that push effect when an item is hovered over */
 }
 
-/* Hide the toggle elements on desktop */
+/* Hide hamburger menu on desktop */
 #menu-toggle, .menu-icon {
     display: none;
 }
 
+/*for the movies pages*/
 .container{
     background-color: rgba(255, 255, 255, 0.7);
     margin: 10px;
@@ -54,13 +54,15 @@ p{
 }
 .mixtape img{
     opacity: 0.5;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in; /*for when opacity is changed when mixtape is clicked*/
 }
 audio {
     width: 230px;
     opacity:0.5;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in; /*for when opacity is changed when mixtape is clicked*/
 }
+
+/*movie poster*/
 .content img{
     float: left;
     margin-right: 20px;
@@ -113,15 +115,36 @@ audio {
     font-weight: 500;
 }
 
-/*about us css*/
-
-
+/*About Us css*/
 #about-us-h2 {
     color: white;
     font-size: 40px;
+    margin-left: 20px;
 }
 
-
+.row1{
+    display: flex; 
+    gap: 40px; 
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+.row2{
+    display: flex; 
+    gap: 60px; 
+    margin-bottom: 60px;
+    margin-left: 20px;
+}
+.about-feedback-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px; /* space between sections and feedback form */
+    padding: 20px;
+}
+.about-sections{
+    display: flex;
+    
+}
 .about-section {
     display: flex;
     align-items: center;
@@ -143,12 +166,12 @@ audio {
     border-radius: 10px;
     max-width: 600px;
     flex: 1;
-    backdrop-filter: blur(3px); /* optional aesthetic blur */
+    backdrop-filter: blur(3px);
     font-size: 18px;
     color: black;
 }
 
-/* FEEDBACK FORM STYLES */
+/* FEEDBACK FORM */
 .feedback-container {
     border-radius: 10px;
     background-color: rgba(128, 0, 128, 0.85);
@@ -169,13 +192,13 @@ audio {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    min-height: 80px;
+    min-height: 50px;
 }
 
 .feedback-label {
     width: 25%;
     font-weight: bold;
-    padding-top: 12px;
+    padding: 12px;
 }
 
 .feedback-input {
@@ -210,18 +233,7 @@ audio {
     background-color: #8f3fff;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
-    .feedback-row {
-        flex-direction: column;
-    }
 
-    .feedback-label,
-    .feedback-input,
-    .feedback-submit {
-        width: 100%;
-    }
-}
 
 
 
@@ -236,13 +248,13 @@ footer a{
 
 /* TABLET (and smaller) STYLES */
 @media (max-width: 1024px) {
-
+    /*movies page container to have less margin and padding*/
     .container {
         margin: 5px;
         padding: 5px;
     }
     
-
+    /* for navbar items to not "push" so much*/
     .nav-links a {
         padding: 0px 10px;
     }
@@ -252,24 +264,31 @@ footer a{
     }
 
 
-    .content {
-        flex-direction: column;
-    }
+    /*for youtube videos to be smaller*/
     iframe{
-        width:300px;
-        height:150px;
+        width:350px;
+        height:200px;
     }
+
+    /*less space between quotes and trailer*/    
     .scenes img{
         margin-right: 20px;
+    }
+
+    /*adjusting margin around about us section of our profiles*/
+    .row1{
+        margin: 10px;
+    }
+    .row2{
+        margin: 10px;
     }
 }
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
-
+    /*displaying hamburger menu*/
     .menu-icon {
         display: block;
-    
         right: 20px;
         top: 20px;
         cursor: pointer;
@@ -308,10 +327,33 @@ footer a{
     #menu-toggle:checked ~ .nav-links {
         display: flex; 
     }
+
+    /*making quotes and trailers come one after another to fit the space*/
     .scenes{
         flex-direction: column;
     }
+
+    /*changing the grid layout for characters page so that it is only one character per row*/
     .characters{
         grid-template-columns: repeat(1, 320px);
     }
+
+
+    /*making about us rows into a singular column*/
+    .row1{
+        flex-direction: column;
+        margin-right: 10px;
+    }
+    .row2{
+        flex-direction: column;
+        margin-right: 10px;
+    }
+
+    /*adjusting size for feedback form*/
+    .feedback-container {
+        max-width: 700px;
+        min-height: 700px;
+        margin: 10px;
+    }
+
 }

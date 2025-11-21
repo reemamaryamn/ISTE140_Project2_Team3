@@ -516,8 +516,10 @@ body {
     text-shadow: var(--glow-strength) var(--color-neon-magenta);
 }
 
-
+/*for mobile*/
 @media (max-width: 768px) {
+
+    /*Making hamburger menu visible*/
     .menu-icon {
         display: block;
         z-index: 2000;
@@ -542,10 +544,12 @@ body {
         right: 0;
     }
 
-    /* Center the menu on mobile */
+    /* Center the menu */
     .nav-links li {
         text-align: left;
     }
+
+    /*adjusting padding and size for mobile*/
     .main-header, .main-footer {
         padding: 10px 15px;
     }
@@ -574,6 +578,8 @@ body {
     }
     
 }
+
+/*for tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .navbar {
