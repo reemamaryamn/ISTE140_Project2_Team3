@@ -345,7 +345,7 @@ footer a{
 
     /*changing the grid layout for characters page so that it is only one character per row*/
     .characters{
-        grid-template-columns: repeat(1, 320px);
+        grid-template-columns: 320px;
     }
 
 
