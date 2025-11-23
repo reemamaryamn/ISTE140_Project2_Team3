@@ -275,6 +275,16 @@ footer a{
         margin-right: 20px;
     }
 
+    /*fixing sizing and space between images for characters page*/
+    .characters {
+        grid-template-columns: repeat(3, 200px);
+    }
+    
+    .charactercard img{
+        width: 200px ;
+        height: 200px ;
+    }
+
     /*adjusting margin around about us section of our profiles*/
     .row1{
         margin: 10px;
