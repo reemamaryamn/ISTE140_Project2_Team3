@@ -1,4 +1,6 @@
-# Guardians of the Galaxy Fan Website 🚀
+# ISTE140_Project1_Team3
+
+# Guide to Guardians of the Galaxy🚀
 
 A comprehensive fan website celebrating the Guardians of the Galaxy franchise, featuring character profiles, movie summaries, memorable quotes, and interactive galactic exploration.
 
