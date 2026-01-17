@@ -1,4 +1,4 @@
-# ISTE140_Project1_Team3
+# ISTE140_Project2_Team3
 
 # Guide to Guardians of the Galaxy🚀
 
